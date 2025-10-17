@@ -1,0 +1,240 @@
+#1. Escribe un programa que imprima "Hola Mundo".
+print("Hola Mundo")
+
+#2. Pide al usuario su nombre y muéstralo en pantalla.
+nombre=input("Por favor, introduce tu nombre: ")
+print("Tu nombre es:", nombre)
+
+#3. Pide dos números al usuario y muestra su suma.
+num1 = float(input("Introduce el primer número: "))
+num2 = float(input("Introduce el segundo número: "))
+suma = num1 + num2
+print("La suma es:", suma)
+
+#4. Calcula el área de un triángulo con base y altura dadas.
+base = float(input("Introduce la base del rectángulo: "))
+altura = float(input("Introduce la altura del rectángulo: "))
+area = base * altura
+print("El área del rectángulo es:", area)
+
+#5. Convierte grados Celsius a Fahrenheit.
+celsius = float(input("Introduce la temperatura en grados Celsius: "))
+fahrenheit = (celsius * 9/5) + 32
+print("La temperatura en grados Fahrenheit es:", fahrenheit)
+
+#6. Pide un número e imprime si es par o impar.
+numero =int(input("Introduce un número entero: "))
+if numero % 2 == 0:
+    print("El número es par.")
+else:
+    print("El número es impar.")
+
+#7. Pide tres números e imprime el mayor de ellos.
+num1 = float(input("Introduce el primer número: "))
+num2 = float(input("Introduce el segundo número: "))
+num3 = float(input("Introduce el tercer número: "))
+mayor = num1
+if num2 > mayor:
+    mayor = num2
+if num3 > mayor:
+    mayor = num3
+print("El mayor número es:", mayor)
+
+#8. Calcula el cuadrado de un número.
+num = float(input("Introduce un número: "))
+cuadrado = num ** 2
+print("El cuadrado de", num, "es:", cuadrado)
+
+#9. Pide un número y muestra su tabla de multiplicar.
+num = int(input("Introduce un número para ver su tabla de multiplicar: "))
+print("Tabla de multiplicar del",num,":")
+contador = 1
+while contador <= 10:
+  print(num, "x",contador, "=", num*contador)
+  contador = contador + 1
+
+#10. Pide una palabra y muéstrala al revés.
+palabra = input("Introduce una palabra: ")
+palabra_invertida = palabra[::-1]
+print("La palabra al revés es:", palabra_invertida)
+
+#11. Pide la edad y determina si es mayor o menor de edad.
+edad = int(input("Introduce tu edad: "))
+if edad >= 18:
+    print("Eres mayor de edad.")
+else:
+    print("Eres menor de edad.")
+
+#12. Calcula la factorial de un número.
+numero = int(input("Introduce un número para calcular su factorial: "))
+factorial = 1
+for i in range(1, numero + 1):
+    factorial *= i
+print("El factorial de",numero, "es:", factorial)
+
+#13. Pide 5 números, suma y saca el promedio.
+num1 = float(input("Introduce el número 1: "))
+num2 = float(input("Introduce el número 2: "))
+num3 = float(input("Introduce el número 3: "))
+num4 = float(input("Introduce el número 4: "))
+num5 = float(input("Introduce el número 5: "))
+suma = num1 + num2 + num3 + num4 + num5
+promedio = suma / 5
+print("El promedio de los 5 números es:", promedio)
+
+#14. Pide un número y muestra todos los pares desde 1 hasta ese número.
+numero_limite=int(input("Introduce un número: "))
+print("Números pares hasta: ",numero_limite)
+contador=1
+while contador <= numero_limite:
+  if contador % 2 == 0:
+    print(contador)
+  contador = contador + 1
+
+#15. Pide una letra y determina si es vocal o consonante.
+letra = input("Introduce una letra: ")
+if letra.lower() in "aeiou":
+    print("Es una vocal.")
+else:
+    print("Es una consonante.")
+
+#16. Imprime los primeros 20 números de la serie de Fibonacci.
+a = 0
+b = 1
+contador = 0
+print("Serie de Fibonacci:")
+while contador < 20:
+    print(a)
+    siguiente_numero = a + b
+    a = b
+    b = siguiente_numero
+    contador = contador + 1
+
+#17. Pide un número y verifica si es primo.
+num = int(input("Introduce un número entero: "))
+if num <= 1:
+    print(num," no es un número primo.")
+else:
+    encontro_divisor = 0
+    i = 2
+    while i < num and encontro_divisor == 0:
+        if num % i == 0:
+            encontro_divisor = 1
+        i = i + 1
+    if encontro_divisor == 0:
+        print(num," es un número primo.")
+    else:
+        print(num," no es un número primo.")
+
+#18. Genera una lista con los números del 1 al 100 y muestra solo los múltiplos de 5.
+print("Multiplos de 5 entre 1 y 100:")
+contador = 1
+while contador <= 100:
+  if contador % 5 == 0:
+    print(contador)
+  contador = contador + 1
+
+# 19. Cuenta cuántas vocales tiene una palabra ingresada.
+palabra = input("Introduce una palabra: ")
+contador_vocales = 0
+vocales = "aeiouAEIOU"
+for letra in palabra:
+  if letra in vocales:
+    contador_vocales = contador_vocales + 1
+print(f"La palabra '{palabra}' tiene {contador_vocales} vocales.")
+
+# 20. Simula una calculadora (suma, resta, multiplicación, división).
+num1 = float(input("Introduce el primer número: "))
+num2 = float(input("Introduce el segundo número: "))
+operacion = input("Introduce la operación (+, -, *, /): ")
+if operacion == "+":
+  resultado = num1 + num2
+  print(f"El resultado de la suma es: {resultado}")
+elif operacion == "-":
+  resultado = num1 - num2
+  print(f"El resultado de la resta es: {resultado}")
+elif operacion == "*":
+  resultado = num1 * num2
+  print(f"El resultado de la multiplicación es: {resultado}")
+elif operacion == "/":
+  if num2 != 0:
+    resultado = num1 / num2
+    print(f"El resultado de la división es: {resultado}")
+  else:
+    print("Error: No se puede dividir por cero.")
+else:
+  print("Operación no válida.")
+
+# 21. Crea una lista con 10 números y encuentra el mayor.
+num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+mayor = num[0]
+for numero in num:
+  if numero > mayor:
+    mayor = numero
+print("La lista de números es:", num)
+print("El número mayor en la lista es:", mayor)
+
+# 22. Ordena una lista de números de menor a mayor.
+num = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+print("Lista original:", num)
+num.sort()
+print("Lista ordenada:", num)
+
+# 23. Elimina los duplicados de una lista.
+lista_con_duplicados = [1, 2, 2, 3, 4, 4, 5, 6, 6]
+print("Lista con duplicados:", lista_con_duplicados)
+lista_sin_duplicados = list(set(lista_con_duplicados))
+print("Lista sin duplicados:", lista_sin_duplicados)
+
+# 24. Crea una lista con nombres y ordénala alfabéticamente.
+nombres = ["Juan", "Maria", "Andres", "Ana", "Luis", "Paula"]
+print("Lista de nombres original:", nombres)
+nombres.sort()
+print("Lista de nombres ordenada:", nombres)
+
+#25. Suma todos los números de una lista.
+num = [10, 20, 30, 40, 50]
+suma_total = sum(num)
+print("La lista de números es:", num)
+print("La suma de los números en la lista es:", suma_total)
+
+#26. Une dos listas en una sola.
+lista1 = [1, 2, 3]
+lista2 = [4, 5, 6]
+print("Lista 1:", lista1)
+print("Lista 2:", lista2)
+lista_unida = lista1 + lista2
+print("Lista unida:", lista_unida)
+
+#27. Pide una frase y cuenta cuántas palabras tiene.
+frase = input("Introduce una frase: ")
+palabras = frase.split()
+numero_palabras = len(palabras)
+print("La frase tiene" ,numero_palabras," palabras.")
+
+#28. Verifica si una palabra es palíndromo.
+palabra = input("Introduce una palabra: ")
+palabra = palabra.lower().replace(" ", "")
+palabra_invertida = palabra[::-1]
+if palabra == palabra_invertida:
+  print("La palabra",palabra," es un palíndromo.")
+else:
+  print("La palabra",palabra," no es un palíndromo.")
+
+# 29. Crea una lista con los cuadrados de los 10 primeros números.
+cuadrados = [0] * 10
+contador_indice = 0
+contador_numero = 1
+while contador_numero <= 10:
+  cuadrado = contador_numero ** 2
+  cuadrados[contador_indice] = cuadrado
+  contador_indice = contador_indice + 1
+  contador_numero = contador_numero + 1
+print("Lista de los cuadrados de los primeros 10 números:", cuadrados)
+
+# 30. Encuentra el segundo número más grande de una lista.
+num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("Lista original:", num)
+num.sort()
+segundo_mas_grande = num[-2]
+print("El segundo número más grande es:", segundo_mas_grande)
